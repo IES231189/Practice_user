@@ -1,0 +1,65 @@
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input {
+  width: 90%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #10c278;
+  background-color: #fff;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  font-family: 'Arial', sans-serif;
+}
+
+form button {
+  width: 98%;
+  padding: 12px;
+  background-color: #36770b;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:disabled {
+  background-color: #57965c;
+  cursor: not-allowed;
+}
+
+form button:hover {
+  background-color: #109c28;
+}
+
+form button:focus {
+  outline: none;
+}
+
