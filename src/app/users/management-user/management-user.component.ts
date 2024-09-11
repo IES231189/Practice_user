@@ -7,9 +7,5 @@ import { IUser } from '../iuser';
   styleUrl: './management-user.component.css'
 })
 export class ManagementUserComponent {
-  users: IUser[] = [];
 
-  agregarUsuario(user:IUser):void{
-    this.users.push(user);
-  }
 }
