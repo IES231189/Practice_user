@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
+import { IUser } from '../iuser';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-form',
@@ -6,5 +8,24 @@ import { Component } from '@angular/core';
   styleUrl: './user-form.component.css'
 })
 export class UserFormComponent {
+  newUser:IUser={
+    id:0,
+    name:'',
+    username:'',
+    phone:'',
+    email:''
+
+  };
+
+
+  constructor(private userService: UserService){}
+
+  onSubmit(){
+    this.userService.addUser(this.newUser).subscribe(() => {
+      console.log('User added!');
+  });
+}
+
+
 
 }
