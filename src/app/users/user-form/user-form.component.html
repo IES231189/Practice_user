@@ -1,1 +1,15 @@
-<p>user-form works!</p>
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" required [(ngModel)]="newUser.name" name="name">
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" required [(ngModel)]="newUser.username" name="username">
+
+  <label for="phone">Phone:</label>
+  <input type="text" id="phone" required [(ngModel)]="newUser.phone" name="phone">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" required [(ngModel)]="newUser.email" name="email">
+
+  <button type="submit" [disabled]="!userForm.form.valid">Add User</button>
+</form>
